@@ -4,15 +4,81 @@
 <head>
 <meta charset="utf-8">
 <title>my index page</title>
+<link href="css/hover.css" rel="stylesheet" media="all">
+<style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    a {
+        background: linear-gradient(142deg,#16a085 0%,#f4d03f 100%);
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin: 10px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 20px;
+        border: 2px solid #106d5b;
+    }
+    a:hover {
+        background: linear-gradient(142deg,#6b16a0 0%,#3fcaf4 100%);
+        border: 2px solid #480e6b;
+        transform: scale(1.1);
+    }
+    a:active {
+        background: linear-gradient(142deg,#b40f0f 0%,#feb275 100%);
+        border: 2px solid #7c0505;
+    }
+    @-webkit-keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+@keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+.hvr-buzz {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-buzz:hover, .hvr-buzz:focus, .hvr-buzz:active {
+  -webkit-animation-name: hvr-buzz;
+  animation-name: hvr-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+</style>
 </head>
             
 <body>
 <p>greetings.</p>
-          <ul>
-          <li><a href="text.html">text</a></li>
-          <li><a href="image.html">image</a></li>
-          <li><a href="boxes.html">boxes</a></li>
-          </ul>
+    <ul>
+    <li><a href="text.html" class="hvr-buzz">text</a></li>
+    <li><a href="image.html" class="hvr-buzz">image</a></li>
+    <li><a href="boxes.html" class="hvr-buzz">boxes</a></li>
+    </ul>
 </body>
   
 </html>
